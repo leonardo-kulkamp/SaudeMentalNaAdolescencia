@@ -1,78 +1,351 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Saúde mental na adolescência</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Saúde Mental na Adolescência</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:#0f172a;
+    color:white;
+    line-height:1.7;
+}
+
+header{
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    background:
+    linear-gradient(rgba(15,23,42,.75),rgba(15,23,42,.75)),
+    url("https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=1600&q=80");
+    background-size:cover;
+    background-position:center;
+}
+
+.hero{
+    max-width:900px;
+    padding:20px;
+}
+
+.hero h1{
+    font-size:4rem;
+    margin-bottom:15px;
+}
+
+.hero p{
+    font-size:1.2rem;
+    color:#d1d5db;
+}
+
+.btn{
+    display:inline-block;
+    margin-top:25px;
+    padding:12px 30px;
+    border-radius:30px;
+    background:#38bdf8;
+    color:white;
+    text-decoration:none;
+    font-weight:600;
+    transition:.3s;
+}
+
+.btn:hover{
+    background:#0ea5e9;
+    transform:translateY(-3px);
+}
+
+section{
+    padding:80px 10%;
+}
+
+.section-title{
+    text-align:center;
+    font-size:2.5rem;
+    margin-bottom:50px;
+    color:#38bdf8;
+}
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:25px;
+}
+
+.card{
+    background:#1e293b;
+    padding:25px;
+    border-radius:20px;
+    transition:.3s;
+    box-shadow:0 5px 20px rgba(0,0,0,.2);
+}
+
+.card:hover{
+    transform:translateY(-8px);
+}
+
+.card h3{
+    color:#38bdf8;
+    margin-bottom:10px;
+}
+
+.timeline{
+    display:flex;
+    flex-direction:column;
+    gap:20px;
+}
+
+.item{
+    background:#1e293b;
+    padding:20px;
+    border-left:5px solid #38bdf8;
+    border-radius:10px;
+}
+
+.stats{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:20px;
+}
+
+.stat{
+    background:#1e293b;
+    text-align:center;
+    padding:30px;
+    border-radius:20px;
+}
+
+.stat h2{
+    color:#38bdf8;
+    font-size:2.5rem;
+}
+
+footer{
+    text-align:center;
+    padding:40px;
+    background:#020617;
+    color:#94a3b8;
+}
+
+.authors{
+    color:#38bdf8;
+    font-weight:600;
+}
+
+@media(max-width:768px){
+.hero h1{
+font-size:2.5rem;
+}
+}
+</style>
 </head>
 
 <body>
-    <header>
-        <h1>Saúde mental na adolescência</h1>
-    </header>
 
-    <main>
-        <section>
-            <h2> O que é saúde mental? </h2>
-             <p>Saúde mental, segundo a OMS, é um estado de bem-estar onde o indivíduo reconhece suas habilidades, lida com o estresse do dia a dia, trabalha de forma produtiva e contribui para sua comunidade. Envolve equilíbrio emocional, psicológico e social, afetando como pensamos, sentimos e agimos.</p>
-        </section>
-
-        <section>
-             <h2> Sinais de alerta</h2>
-             <ul> 
-                <li>Falas frequentes sobre morte, morrer ou suicídio</li>
-                <li>Comentários sobre sentir-se sem esperança, sem valor ou sem sentido de vida</li>
-                <li>Aumento de consumo de álcool ou drogas</li>
-                <li> Evitação social e solidão </li>
-                <li> Mudanças drásticas de humor ou comportamento</li>   
-                <li> Despedidas e doação de bens pessoais</li>             
-                <li> Acesso a armas ou meios letais</li>
-                <li> Envolvimento incomum em riscos</li>
-             </ul>
-        </section>
-
-        <section>
-            <h2>Fatores de Risco</h2>
-            <ul>
-                <li>Tentativa prévia de suicídio.</li>
-                <li>Histórico de abuso de substâncias, como álcool ou outras drogas.</li>
-                <li>Histórico de transtornos mentais, como depressão, transtorno bipolar, esquizofrenia ou dependência química</li>
-                <li>Perda recente de pessoa próxima ou problemas importantes de relacionamento.</li>
-                <li>Problemas importantes de relacionamento</li>
-            </ul>
-        </section>
-
-        <section>
-            <h2>Fatores Protetivos</h2>
-            <ul>
-                <li>Vinculos saudáveis interpessoais, familiares e sociais</li>
-                <li>Ambiente familiar e de trabalho acolhedores</li>
-                <li>Capacidades pessoais de resolução de problemas e conflitos</li>
-                <li>Envolvimento em atividades sociais</li>
-                <li>Acesso à serviços de saúde mental</li>
-                <li>Detecção e tratamento precoce de transtornos mentais</li>
-                <li>Contexto social com proteção aos Direitos Humanos</li>
-                <li>Acesso a condições básicas de vida como alimentação, habitação, educação, trabalho, assistência social, entre outros</li>
-            </ul>
-        </section>
-
-        <p> CENTRO DE APOIO <br>
-            VOCÊ NÃO ESTÁ SOZINHO NESSA LUTA, BUSQUE AJUDA! PROCURE APOIO EMOCIONAL <br> 
-            DISQUE CVV 188, Ligue 188 ou acesse <a href="https://cvv.org.br/"> CVV Apoio Emocional </a></p>
-    </main>
-
-    <footer>
+<header>
+    <div class="hero">
+        <h1>Saúde Mental na Adolescência</h1>
         <p>
-            <b> Desenvolvido por: </b> <i> Leonardo, Kawan Victor e João Victor </i> <br>
-            Contato: 12 1234-5678<br>
-            Email: x@gmail.com <br>
+            Entender, acolher e cuidar das emoções é essencial para o bem-estar
+            dos jovens em uma fase cheia de mudanças e desafios.
         </p>
-    </footer>
 
+        <p class="authors">
+            Trabalho de João, Leonardo e Kawan
+        </p>
 
+        <a href="#conteudo" class="btn">Explorar Conteúdo</a>
+    </div>
+</header>
+
+<section id="conteudo">
+    <h2 class="section-title">O que é Saúde Mental?</h2>
+
+    <div class="cards">
+        <div class="card">
+            <h3>Equilíbrio Emocional</h3>
+            <p>
+                Saúde mental é o equilíbrio emocional, psicológico e social
+                que permite lidar com desafios e manter relações saudáveis.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>Tristeza</h3>
+            <p>
+                Emoção passageira causada por situações difíceis ou momentos
+                de frustração.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>Estresse</h3>
+            <p>
+                Reação natural do organismo diante de pressões e desafios.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>Transtornos Mentais</h3>
+            <p>
+                Condições mais intensas e duradouras, como ansiedade e depressão.
+            </p>
+        </div>
+    </div>
+</section>
+
+<section>
+    <h2 class="section-title">Desafios da Adolescência</h2>
+
+    <div class="timeline">
+        <div class="item">
+            📚 Pressão escolar e cobrança por resultados.
+        </div>
+
+        <div class="item">
+            👥 Necessidade de aceitação social.
+        </div>
+
+        <div class="item">
+            📱 Comparações constantes nas redes sociais.
+        </div>
+
+        <div class="item">
+            🎯 Inseguranças sobre o futuro.
+        </div>
+    </div>
+</section>
+
+<section>
+    <h2 class="section-title">Principais Problemas</h2>
+
+    <div class="cards">
+        <div class="card">
+            <h3>Ansiedade</h3>
+            <p>Preocupação excessiva, medo e dificuldade para relaxar.</p>
+        </div>
+
+        <div class="card">
+            <h3>Depressão</h3>
+            <p>Tristeza intensa, isolamento e perda de interesse pelas atividades.</p>
+        </div>
+
+        <div class="card">
+            <h3>Baixa Autoestima</h3>
+            <p>Visão negativa de si mesmo, geralmente influenciada por críticas e comparações.</p>
+        </div>
+
+        <div class="card">
+            <h3>Automutilação</h3>
+            <p>Forma inadequada de lidar com sofrimento emocional intenso.</p>
+        </div>
+
+        <div class="card">
+            <h3>Burnout Estudantil</h3>
+            <p>Exaustão causada pelo excesso de pressão e responsabilidades escolares.</p>
+        </div>
+    </div>
+</section>
+
+<section>
+    <h2 class="section-title">Redes Sociais e Bullying</h2>
+
+    <div class="cards">
+        <div class="card">
+            <h3>Redes Sociais</h3>
+            <p>
+                Comparações excessivas, pressão estética, dependência digital
+                e cyberbullying podem prejudicar a saúde mental.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>Bullying</h3>
+            <p>
+                Agressões físicas ou psicológicas repetidas que podem causar
+                ansiedade, depressão e traumas emocionais.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>Cyberbullying</h3>
+            <p>
+                Acontece no ambiente digital e pode ser ainda mais prejudicial
+                pela exposição pública.
+            </p>
+        </div>
+    </div>
+</section>
+
+<section>
+    <h2 class="section-title">Prevenção e Cuidado</h2>
+
+    <div class="stats">
+        <div class="stat">
+            <h2>👨‍👩‍👧</h2>
+            <p>Apoio da Família</p>
+        </div>
+
+        <div class="stat">
+            <h2>🏫</h2>
+            <p>Papel da Escola</p>
+        </div>
+
+        <div class="stat">
+            <h2>🧠</h2>
+            <p>Terapia</p>
+        </div>
+
+        <div class="stat">
+            <h2>💚</h2>
+            <p>Autocuidado</p>
+        </div>
+    </div>
+
+    <div style="margin-top:40px;">
+        <div class="item">😴 Sono adequado</div>
+        <div class="item">🥗 Alimentação saudável</div>
+        <div class="item">🏃 Exercícios físicos</div>
+        <div class="item">📵 Limitar o uso excessivo das redes sociais</div>
+    </div>
+</section>
+
+<section>
+    <h2 class="section-title">Conclusão</h2>
+
+    <div class="card">
+        <p>
+            A saúde mental na adolescência é um tema que exige atenção da família,
+            da escola e da sociedade. Problemas como ansiedade, depressão,
+            bullying e isolamento podem causar impactos significativos quando
+            não recebem apoio adequado.
+        </p>
+
+        <br>
+
+        <p>
+            Promover o diálogo, o acolhimento e o cuidado emocional é essencial
+            para garantir o desenvolvimento saudável e o bem-estar dos jovens.
+        </p>
+    </div>
+</section>
+
+<footer>
+    <p>Projeto Escolar • Saúde Mental na Adolescência</p>
+    <p>João • Leonardo • Kawan</p>
+</footer>
 
 </body>
-
 </html>
+```
